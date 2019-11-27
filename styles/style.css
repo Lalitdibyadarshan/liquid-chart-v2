@@ -1,0 +1,78 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.card {
+    position: relative;
+    background: rgb(250, 248, 248);
+    height: 250px;
+    width: 200px; 
+    top: 6rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    -webkit-box-shadow: 3px 3px 19px -9px rgba(0,0,0,0.64);
+    -moz-box-shadow: 3px 3px 19px -9px rgba(0,0,0,0.64);
+    box-shadow: 3px 3px 19px -9px rgba(0,0,0,0.64);
+    margin-top: 3rem;
+}
+.circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 160px;
+    height: 160px;
+    background: grey;
+    border-radius: 50%; 
+    -webkit-box-shadow: 3px 3px 30px -12px rgba(0,0,0,0.64);
+    -moz-box-shadow: 3px 3px 30px -12px rgba(0,0,0,0.64);
+    box-shadow: 3px 3px 30px -12px rgba(0,0,0,0.64);
+}
+
+.wave {
+    top: 0%;
+    margin-top: 0%;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    -webkit-box-shadow: inset 3px 3px 22px -12px rgba(0,0,0,0.64);
+    -moz-box-shadow: inset 3px 3px 22px -12px rgba(0,0,0,0.64);
+    box-shadow: inset 3px 3px 22px -12px rgba(0,0,0,0.64);
+    overflow: hidden;
+}
+
+.wave:before,
+.wave:after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: inherit;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    background: white;
+}
+
+.wave:before{
+    border-radius: 42%;
+    background: rgba(255, 255, 255, 1);
+    animation: animate 10s linear infinite;
+}
+
+.wave:after{
+    border-radius: 38%;
+    background: rgba(255, 255, 255, 0.5);
+    animation: animate 9.8s linear infinite;
+}
+
+@keyframes animate{
+    0% {
+        transform: translate(-50%, -75%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%, -75%) rotate(360deg);
+    }
+}
